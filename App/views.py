@@ -86,8 +86,7 @@ def buscarPelicula(request):
         pelis = Pelicula.objects.filter(nombre = nombre)
         return render(request,'App/resultadosBusqueda.html',{'pelis':pelis, 'nombre':nombre})
     else:
-        respuesta = "No se ingreso camada"
-    return HttpResponse(respuesta)
+        return render(request,'App/noSeIngreso.html')
 
 def buscarSerie(request):
     if request.GET['nombre']:
@@ -95,8 +94,7 @@ def buscarSerie(request):
         series = Serie.objects.filter(nombre = nombre)
         return render(request,'App/resultadosBusquedaSerie.html',{'series':series, 'nombre':nombre})
     else:
-        respuesta = "No se ingreso camada"
-    return HttpResponse(respuesta)
+        return render(request,'App/noSeIngreso.html')
 
 def buscarDocumental(request):
     if request.GET['nombre']:
@@ -104,5 +102,4 @@ def buscarDocumental(request):
         documentales = Documental.objects.filter(nombre = nombre)
         return render(request,'App/resultadosBusquedaDocumentales.html',{'documentales':documentales, 'nombre':nombre})
     else:
-        respuesta = "No se ingreso camada"
-    return HttpResponse(respuesta)
+        return render(request,'App/noSeIngreso.html')
