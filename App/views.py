@@ -70,3 +70,39 @@ def seriesFormulario(request):
     else:
         miFormulario = SeriesForm()
     return render(request,'App/seriesForm.html', {'miFormulario':miFormulario})
+
+def busquedaPelicula(request):
+    return render(request,"App/busquedaPelicula.html")
+
+def busquedaSerie(request):
+    return render(request,"App/busquedaSerie.html")
+
+def busquedaDocumental(request):
+    return render(request,"App/busquedaDocumental.html")
+
+def buscarPelicula(request):
+    if request.GET['nombre']:
+        nombre = request.GET['nombre']
+        pelis = Pelicula.objects.filter(nombre = nombre)
+        return render(request,'App/resultadosBusqueda.html',{'pelis':pelis, 'nombre':nombre})
+    else:
+        respuesta = "No se ingreso camada"
+    return HttpResponse(respuesta)
+
+def buscarSerie(request):
+    if request.GET['nombre']:
+        nombre = request.GET['nombre']
+        series = Serie.objects.filter(nombre = nombre)
+        return render(request,'App/resultadosBusquedaSerie.html',{'series':series, 'nombre':nombre})
+    else:
+        respuesta = "No se ingreso camada"
+    return HttpResponse(respuesta)
+
+def buscarDocumental(request):
+    if request.GET['nombre']:
+        nombre = request.GET['nombre']
+        documentales = Documental.objects.filter(nombre = nombre)
+        return render(request,'App/resultadosBusquedaDocumentales.html',{'documentales':documentales, 'nombre':nombre})
+    else:
+        respuesta = "No se ingreso camada"
+    return HttpResponse(respuesta)

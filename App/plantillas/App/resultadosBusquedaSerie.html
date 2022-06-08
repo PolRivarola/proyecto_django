@@ -1,0 +1,22 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1 class="mb-0">
+    Resultados de busqueda para:
+    <span class="text-primary">{{nombre}}</span>
+</h1>
+{% endblock %}
+{% block contenido %}
+{%if series %}
+<ul>
+    
+    {% for serie in series%}
+    <p style="color: black; font-size: 30px;">Nombre:{{serie.nombre}}, Tipo:{{serie.tipo}}, Duración:{{serie.capitulos}}</p>
+    <br>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No hay resultados de busqueda</p>
+{% endif%}
+
+{% endblock %}

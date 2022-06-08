@@ -1,0 +1,14 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1 class="mb-0">
+    Buscar
+    <span class="text-primary">Pelicula</span>
+</h1>
+{% endblock %}
+{% block contenido %}
+<form action="{% url 'buscarPelicula' %}" method="GET">
+    <input type="text" name ="nombre" id="nombre" placeholder="Titanic" >
+    <input type="submit", value="Buscar">
+</form>
+{% endblock %}
