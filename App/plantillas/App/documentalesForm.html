@@ -1,0 +1,19 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1 class="mb-0">
+    Cargar 
+    <span class="text-primary">documental</span>
+</h1>
+{% endblock %}
+{% block contenido%}
+<form action="{% url 'CargarDocumental' %}" method="POST">{% csrf_token %}
+
+    <table>
+        {{ miFormulario.as_table }}
+
+    </table>
+    <input style="margin-top: 1em; color:white; background-color: black; border-radius: 10px;" type="submit", value="Enviar Documental">
+</form>
+{% endblock %}
+

@@ -3,28 +3,26 @@ from django.db import models
 from django.forms import DateField, IntegerField
 
 # Create your models here.
-class Curso(models.Model):
+class Pelicula(models.Model):
     nombre = models.CharField(max_length=40)
-    camada = models.IntegerField()
+    tipo = models.CharField(max_length=20)
+    duracion = models.IntegerField()
+    def __str__(self) -> str:
+        return self.nombre + " " + self.tipo + " " + str(self.duracion)+"min" 
 
-class Estudiante(models.Model):
+class Serie(models.Model):
     nombre = models.CharField(max_length=40)
-    apellido = models.CharField(max_length=40)
-    email = models.EmailField()
+    tipo = models.CharField(max_length=40)
+    capitulos = models.IntegerField()
+    def __str__(self) -> str:
+        return self.nombre + " " + self.tipo + " " + str(self.capitulos)+"cap" 
 
-class Profesor(models.Model):
+class Documental(models.Model):
     nombre = models.CharField(max_length=40)
-    apellido = models.CharField(max_length=40)
-    email = models.EmailField()
-    profesion = models.CharField(max_length=30)
+    tipo = models.CharField(max_length=40)
+    duracion = models.IntegerField()
+    def __str__(self) -> str:
+        return self.nombre + " " + self.tipo + " " + str(self.duracion)+"min" 
     
-class Entregable(models.Model):
-    nombre = models.CharField(max_length=40)
-    fechaDeEntregable = models.DateField()
-    entregado = models.BooleanField()
-    
-class Familiar(models.Model):
-    nombre = models.CharField(max_length=30)
-    dni = models.IntegerField()
-    cumpleanos = models.DateField()  
+
     
