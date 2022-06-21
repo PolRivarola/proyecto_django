@@ -1,0 +1,15 @@
+
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1 class="mb-0">
+    Detalles de documental
+</h1>
+{% endblock %}
+{% block contenido %}
+<p>Nombre: {{documental.nombre}}</p>
+<p>Tipo: {{documental.tipo}}</p>
+<p>Duración (min):{{documental.duracion}}</p>
+<p>Autor:{{documental.autor}}</p>
+<p>Fecha: {{documental.fecha}}</p>
+{% endblock %}

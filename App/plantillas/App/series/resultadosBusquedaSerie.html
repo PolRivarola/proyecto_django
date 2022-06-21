@@ -11,8 +11,12 @@
 <ul>
     
     {% for serie in series%}
-    <p style="color: black; font-size: 30px;">Nombre:{{serie.nombre}}, Tipo:{{serie.tipo}}, Duración:{{serie.capitulos}}</p>
-    <br>
+    <p>Nombre: {{serie.nombre}}</p>
+    <p>Tipo: {{serie.tipo}}</p>
+    <p>Duración (min):{{serie.duracion}}</p>
+    <p>Autor:{{serie.autor}}</p>
+    <p style="border-bottom: 1px solid #bd5d38;">Fecha: {{serie.fecha}}</p>
+
     {% endfor %}
 </ul>
 {% else %}

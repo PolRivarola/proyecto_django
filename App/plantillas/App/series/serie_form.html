@@ -1,0 +1,15 @@
+
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1>Creacion/Edicion de Series</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <input class="btns" type="submit" name="" value="Listo">
+</form>
+{% endblock %}
+

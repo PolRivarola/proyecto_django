@@ -1,8 +1,16 @@
 {% extends "App/padre.html" %}
 {% load static %}
 {% block titulo %}
+{% if request.user.is_authenticated%}
+
 <h1 class="mb-0">
-    Bienvenidos a 
-    <span class="text-primary">PelisPol</span>
+    <h3>{{mensaje}}</h3>
+
+
+{% else %}
+<h3>Hola invitado</h3>
+{% endif%}
+    <h1>Bienvenido a 
+    <span class="text-primary">PelisPol</span></h1>
 </h1>
 {% endblock %}

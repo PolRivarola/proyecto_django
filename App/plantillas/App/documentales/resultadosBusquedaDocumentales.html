@@ -11,8 +11,11 @@
 <ul>
     
     {% for documental in documentales%}
-    <p style="color: black; font-size: 30px;">Nombre:{{documental.nombre}}, Tipo:{{documental.tipo}}, Duración:{{documental.duracion}}</p>
-    <br>
+    <p>Nombre: {{documental.nombre}}</p>
+    <p>Tipo: {{documental.tipo}}</p>
+    <p>Duración (min):{{documental.duracion}}</p>
+    <p>Autor:{{documental.autor}}</p>
+    <p style="border-bottom: 1px solid #bd5d38;">Fecha: {{documental.fecha}}</p>
     {% endfor %}
 </ul>
 {% else %}

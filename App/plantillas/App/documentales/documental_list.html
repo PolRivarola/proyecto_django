@@ -1,0 +1,42 @@
+
+
+{% extends "App/padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-0">
+    Documentales
+</h1>
+{% endblock %}
+{% block contenido %}
+<div class="pelicula">
+    {% for documental in object_list%}
+
+    
+    <a class="link" href="{% url 'documentalesDetail' documental.id %}"><li class="listaPelis">{{documental.nombre}}</li></a>
+    {% if request.user.is_authenticated%}
+
+    <div style="display: inline-flex;     border-bottom: 1px solid #bd5d38;
+    padding: 10px;">
+        <button class="btns">
+            <a href="{% url 'documentalesUpdate' documental.id %}">Editar</a>
+        </button>
+        <button class="btns">
+            <a href="{% url 'documentalesDelete' documental.id %}">Borrar</a>
+        </button>
+        
+    </div>
+    {% endif%}
+    <br>
+
+    {% endfor %}
+
+    <button class="btns" style="margin-top:1em ;">
+        <a href="{% url 'documentalesCreate'%}">Crear nuevo documental</a>
+    </button>
+    <button class="btns" style="margin-top:1em ; width: 60%; height:130%;">
+        <a href="{% url 'busquedaDocumental' %}">Buscar documental</a>
+    </button>
+</div>
+{% endblock %}
+

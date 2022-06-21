@@ -1,0 +1,38 @@
+.link{
+    color: Black;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.pelicula{
+    display: inline-flex;
+    flex-flow: column;
+    width: 25vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.listaPelis{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pPol{
+    font-size: large;
+    color: black;
+}
+
+.btns{
+    border-radius: 25cm;
+    border-width: 0px;
+    background-color: #bd5d38;
+    color: white;
+
+}
+
+.btns a{
+    text-decoration: none;
+    color: white;
+}

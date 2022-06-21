@@ -11,8 +11,11 @@
 <ul>
     
     {% for peli in pelis%}
-    <p style="color: black; font-size: 30px;">Nombre:{{peli.nombre}}, Tipo:{{peli.tipo}}, Duración:{{peli.duracion}}</p>
-    <br>
+    <p>Nombre: {{pelis.nombre}}</p>
+    <p>Tipo: {{pelis.tipo}}</p>
+    <p>Duración (min):{{pelis.duracion}}</p>
+    <p>Autor:{{pelis.autor}}</p>
+    <p style="border-bottom: 1px solid #bd5d38;">Fecha: {{pelis.fecha}}</p>
     {% endfor %}
 </ul>
 {% else %}

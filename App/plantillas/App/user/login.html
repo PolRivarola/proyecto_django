@@ -1,0 +1,14 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1>Login</h1>
+{% endblock %}
+{% block contenido %}
+<form method="POST">{% csrf_token %}
+    <h3>Ingrese usuario y contraseña</h3>
+    {{form.as_p}}
+    <button class="btns" type="submit" value="Enviar">Inicio de Sesion</button>
+</form>
+
+
+{% endblock %}

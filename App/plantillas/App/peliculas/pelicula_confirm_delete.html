@@ -1,0 +1,14 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1 class="mb-0">
+    Eliminar Pelicula
+    <span class="text-primary">{{nombre}}</span>
+</h1>
+{% endblock %}
+{% block contenido %}
+<form method="POST">{% csrf_token %}
+    <p class="pPol">Estas seguro que quieres eliminar {{object.nombre}}?</p>
+    <input class="btns" style="width:40px ;" type="submit" name="" value="Si">
+</form>
+{% endblock %}

@@ -1,0 +1,41 @@
+
+{% extends "App/padre.html" %}
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-0">
+    Peliculas
+</h1>
+{% endblock %}
+{% block contenido %}
+<div class="pelicula">
+    {% for pelicula in object_list%}
+
+    <a class="link" href="{% url 'pelisDetail' pelicula.id %}"><li class="listaPelis">{{pelicula.nombre}}</li></a>
+    {% if request.user.is_authenticated%}
+
+    <div style="display: inline-flex;     border-bottom: 1px solid #bd5d38;
+    padding: 10px;">
+        <button class="btns">
+            <a href="{% url 'pelisUpdate' pelicula.id %}">Editar</a>
+        </button>
+        <button class="btns">
+            <a href="{% url 'pelisDelete' pelicula.id %}">Borrar</a>
+        </button>
+        
+    </div>
+    {% endif %}
+    <br>
+
+    {% endfor %}
+
+    <button class="btns" style="margin-top:1em ;">
+        <a href="{% url 'pelisCreate'%}">Crear nueva pelicula</a>
+    </button>
+    <button class="btns" style="margin-top:1em ; width: 60%; height:130%;">
+        <a href="{% url 'busquedaPelicula' %}">Buscar pelicula</a>
+    </button>
+
+</div>
+{% endblock %}
+

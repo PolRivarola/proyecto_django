@@ -1,0 +1,14 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1 class="mb-0">
+    Detalles de serie
+</h1>
+{% endblock %}
+{% block contenido %}
+<p>Nombre: {{serie.nombre}}</p>
+<p>Tipo: {{serie.tipo}}</p>
+<p>Caitulos: {{serie.capitulos}}</p>
+<p>Autor: {{serie.autor}}</p>
+<p>Fecha: {{serie.fecha}}</p>
+{% endblock %}

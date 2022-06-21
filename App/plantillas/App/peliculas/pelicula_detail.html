@@ -1,0 +1,14 @@
+{% extends "App/padre.html" %}
+{% load static %}
+{% block titulo %}
+<h1 class="mb-0">
+    Detalles de pelicula
+</h1>
+{% endblock %}
+{% block contenido %}
+<p>Nombre: {{pelicula.nombre}}</p>
+<p>Tipo: {{pelicula.tipo}}</p>
+<p>Duración:{{pelicula.duracion}}</p>
+<p>Autor:{{pelicula.autor}}</p>
+<p>Fecha: {{pelicula.fecha}}</p>
+{% endblock %}
