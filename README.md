@@ -12,4 +12,4 @@ PelisPol es un sitio dedicado a peliculas
 
 ##Video demostrativo de funcionamiento
 
-![pelispol-google-chrome-2022-06-30-21-31-28_o8NqsjrT (1)](https://user-images.githubusercontent.com/82118200/176801078-2676f06e-c9b7-44a3-930f-c9cfedac3e7e.gif)
+![pelispol-google-chrome-2022-06-30-22-05-58_0hfx0Fka](https://user-images.githubusercontent.com/82118200/176803340-603841c9-1bd4-4918-99c2-873c74b57f5c.gif)
