@@ -14,10 +14,9 @@ from django.template import loader
 # Create your views here.
 
 
-def inicio(self):
-    plantilla = loader.get_template("App/inicio.html")
-    documento= plantilla.render()
-    return HttpResponse(documento)
+def inicio(request):
+        return render(request,"App/inicio.html")
+
 
 def busquedaPelicula(request):
     return render(request,"App/peliculas/busquedaPelicula.html")
@@ -143,7 +142,7 @@ def login_request(request):
             user = authenticate(username= usuario,password=clave)
             if user is not None:
                 login(request,user)
-                return render(request, 'App/inicio.html',{'mensaje':f'Hola {usuario}'})
+                return render(request, 'App/inicio.html')
 
             else:
                 return render(request, 'App/inicio.html',{'mensaje':'Datos incorrectos'})

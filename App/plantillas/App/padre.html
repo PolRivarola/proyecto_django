@@ -29,17 +29,19 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'pelisList' %}">Peliculas</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'seriesList' %}">Series</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'documentalesList' %}">Documentales</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">About me</a></li>
+
                     {% if not request.user.is_authenticated%}
-                    <li class="nav-item">                    
+                    <li style="border-top: solid 1px #c79582  ;" class="nav-item">                    
                         <a  class="nav-link js-scroll-trigger" href="{% url 'login'%}">Log in</a>
                     </li>
-    
-                    {% else %}
                     <li class="nav-item">
                         <a
                         class="nav-link js-scroll-trigger"   href="{% url 'register'%}">Registrar nuevo usuario</a>
                     </li>
-                    <li class="nav-item">
+                    {% else %}
+                    
+                    <li style="border-top: solid 1px #c79582  ;" class="nav-item">
                         <a
                         class="nav-link js-scroll-trigger"   href="{% url 'editarUser'%}">Editar usuario</a>
                     </li>
@@ -48,7 +50,6 @@
                     </li>
     
                     {% endif%}
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">About me</a></li>
 
                 </ul>
             </div>

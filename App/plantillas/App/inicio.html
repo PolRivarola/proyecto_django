@@ -4,9 +4,8 @@
 {% if request.user.is_authenticated%}
 
 <h1 class="mb-0">
-    <h3>{{mensaje}}</h3>
 
-
+<h3>Hola {{request.user.username}}</h3>
 {% else %}
 <h3>Hola invitado</h3>
 {% endif%}
