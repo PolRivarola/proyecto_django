@@ -2,10 +2,14 @@
 
 PelisPol es un sitio dedicado a peliculas
 
-## Como usarlo
-1. Entrar a alguna de las opciones de Carga de Pelicula/Serie/Documental
-2. Cargar Pelicula/Serie/Documental a la base de datos
-3. Entrar a alguna de las opciones de Buscqueda de Pelicula/Serie/Documental
-4. Buscar Pelicula/Serie/Documental en la base de datos
-5. Esto te llevara a una pagina con los resultados
+## Servicios
+1. Creacion de usuarios
+2. Creacion de peliculas,series y documentales
+3. Buscar peliculas,series y documentales previamente creados
+4. Editar peliculas, series y documentales (Solo para usuarios)
+5. Borrar peliculas, series y documentales (Solo para usuarios)
+
+
+##Video demostrativo de funcionamiento
+https://user-images.githubusercontent.com/82118200/176800778-e0799490-c141-49ea-a389-f578c3f5f544.mp4
 
