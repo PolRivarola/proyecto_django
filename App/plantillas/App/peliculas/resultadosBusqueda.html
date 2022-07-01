@@ -11,11 +11,12 @@
 <ul>
     
     {% for peli in pelis%}
-    <p>Nombre: {{pelis.nombre}}</p>
-    <p>Tipo: {{pelis.tipo}}</p>
-    <p>Duración (min):{{pelis.duracion}}</p>
-    <p>Autor:{{pelis.autor}}</p>
-    <p style="border-bottom: 1px solid #bd5d38;">Fecha: {{pelis.fecha}}</p>
+    <p>Nombre: {{peli.nombre}}</p>
+    <p>Tipo: {{peli.tipo}}</p>
+    <p>Duración (min):{{peli.duracion}}</p>
+    <p>Autor:{{peli.autor}}</p>
+
+    <p style="border-bottom: 1px solid #bd5d38;">Fecha: {{peli.fecha}}</p>
     {% endfor %}
 </ul>
 {% else %}

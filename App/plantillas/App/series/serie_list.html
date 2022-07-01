@@ -28,10 +28,13 @@
     <br>
 
     {% endfor %}
+    {% if request.user.is_authenticated%}
 
     <button class="btns" style="margin-top:1em ;">
         <a href="{% url 'seriesCreate'%}">Crear nueva serie</a>
     </button>
+    {% endif %}
+
     <button class="btns" style="margin-top:1em ; width: 60%; height:130%;">
         <a href="{% url 'busquedaSerie' %}">Buscar serie</a>
     </button>
