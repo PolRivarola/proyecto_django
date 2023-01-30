@@ -30,7 +30,7 @@ def busquedaDocumental(request):
 def buscarPelicula(request):
     if request.GET['nombre']:
         nombre = request.GET['nombre']
-        pelis = Pelicula.objects.filter(nombre = nombre)
+        pelis = Pelicula.objects.filter(nombre=nombre) | Pelicula.objects.filter(nombre__startswith=nombre[0]) 
         return render(request,'App/peliculas/resultadosBusqueda.html',{'pelis':pelis, 'nombre':nombre})
     else:
         return render(request,'App/noSeIngreso.html')
@@ -38,7 +38,7 @@ def buscarPelicula(request):
 def buscarSerie(request):
     if request.GET['nombre']:
         nombre = request.GET['nombre']
-        series = Serie.objects.filter(nombre = nombre)
+        series = Serie.objects.filter(nombre=nombre) | Serie.objects.filter(nombre__startswith=nombre[0]) 
         return render(request,'App/series/resultadosBusquedaSerie.html',{'series':series, 'nombre':nombre})
     else:
         return render(request,'App/noSeIngreso.html')
@@ -46,7 +46,7 @@ def buscarSerie(request):
 def buscarDocumental(request):
     if request.GET['nombre']:
         nombre = request.GET['nombre']
-        documentales = Documental.objects.filter(nombre = nombre)
+        documentales = Documental.objects.filter(nombre=nombre) | Documental.objects.filter(nombre__startswith=nombre[0]) 
         return render(request,'App/documentales/resultadosBusquedaDocumentales.html',{'documentales':documentales, 'nombre':nombre})
     else:
         return render(request,'App/noSeIngreso.html')
